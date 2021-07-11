@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block content %}
+
+<div>
+  
+  <H2>You have selected movie  " {{movie_title}} "</H2>
+  <div>
+    {% if similar_movies is defined %}
+        I Recommended Movies for you......
+		{% for mv in similar_movies %}
+			<H3>{{mv}}</H3>
+			<br>
+		{% endfor %}
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

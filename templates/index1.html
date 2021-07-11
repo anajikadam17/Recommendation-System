@@ -1,0 +1,16 @@
+{% extends "base2.html" %} {% block content %}
+
+<div>
+  <form id="form1" action="/predict1" method="POST" enctype="multipart/form-data">
+	<select id="mySelect" name = "movie_title">
+		{% for colour in suggestions %}
+			<option value="{{colour}}">{{colour}}</option>"
+		{% endfor %}
+	</select>
+	<br>
+	<br>
+    <button type="submit" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+  </form>
+  
+</div>
+{% endblock %}
